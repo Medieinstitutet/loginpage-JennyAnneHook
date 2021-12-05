@@ -1,2 +1,10 @@
 body{ background-color: lightblue;
 }
+
+#logoutBtn{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
