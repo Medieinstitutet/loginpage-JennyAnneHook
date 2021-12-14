@@ -38,16 +38,21 @@ function logincheck(){
     let usernameinput=document.getElementById("username").value; 
     let passwordinput=document.getElementById("Password").value;
     if(usernameinput === username && passwordinput === password){
-        console.log("Du är inloggad");
+        //console.log("Du är inloggad");
         localStorage.setItem("inloggad", true);        //sparar till LS när uppgifterna är rätt
         localStorage.getItem("inloggad");
-        loginsection.innerHTML="";
+        loginsection.innerHTML="Välkommen du är nu inloggad!";
         loginBtn.classList.add("hide");
         logoutBtn.style.display="block";
+        inloggad()
         
        //vid fel uppgifter:     
     }else{                                                                   
-        console.log("Sorry, fel användarnamn eller lösenord, försök igen! ");
+        //console.log("Oj, något gick fel - försök igen!");
+        let wrong = document.createElement("inloggad");
+        wrong.innerHTML="oj, något gick fel - försök igen!"
+        loginsection.append(wrong)
     }
 }
+
 
