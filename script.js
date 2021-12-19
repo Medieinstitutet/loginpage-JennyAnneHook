@@ -48,7 +48,7 @@ function logincheck(){
         
        //vid fel uppgifter:     
     }else{                                                                   
-        //console.log("Oj, något gick fel - försök igen!");
+        
         let wrong = document.createElement("inloggad");
         wrong.innerHTML="oj, något gick fel - försök igen!"
         loginsection.append(wrong)
