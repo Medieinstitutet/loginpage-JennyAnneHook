@@ -14,6 +14,7 @@ loginBtn.innerHTML = "Logga in!";
 const logoutBtn = document.getElementById("logoutBtn")
 
 const loginsection = document.querySelector("#Inloggad")
+//const logoutBtn = localStorage.clear()
 
 footer.style.backgroundColor = "white";
 footer.innerHTML = "Ha det gött - häjjj!";
@@ -30,29 +31,31 @@ if(inloggad==="true"){
     console.log("Kul att se dig igen, du är nu inloggad!");
 }
 loginBtn.addEventListener("click", logincheck);
-//  logOutBtn.addEventListener("click", () => {
-//     localStorage.clear();
-//     location.reload();
+
 
 function logincheck(){
     let usernameinput=document.getElementById("username").value; 
     let passwordinput=document.getElementById("Password").value;
     if(usernameinput === username && passwordinput === password){
         //console.log("Du är inloggad");
-        localStorage.setItem("inloggad", true);        //sparar till LS när uppgifterna är rätt
+        localStorage.setItem("inloggad", "true");        //sparar till LS när uppgifterna är rätt
         localStorage.getItem("inloggad");
         loginsection.innerHTML="Välkommen du är nu inloggad!";
         loginBtn.classList.add("hide");
         logoutBtn.style.display="block";
-        inloggad()
+        
+        //inloggad()
         
        //vid fel uppgifter:     
     }else{                                                                   
         
         let wrong = document.createElement("inloggad");
         wrong.innerHTML="oj, något gick fel - försök igen!"
-        loginsection.append(wrong)
+        loginsection.append(wrong);
     }
 }
-
-
+//  logOutBtn.addEventListener("click", () => {
+//     localStorage.clear();
+//      location.reload();
+//  }
+ 
