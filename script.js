@@ -54,8 +54,8 @@ function logincheck(){
         loginsection.append(wrong);
     }
 }
-//  logOutBtn.addEventListener("click", () => {
-//     localStorage.clear();
-//      location.reload();
-//  }
+    logoutBtn.addEventListener("click", () => {
+    localStorage.clear();
+    location.reload();
+ });
  
