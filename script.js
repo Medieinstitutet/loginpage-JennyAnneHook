@@ -49,7 +49,7 @@ function logincheck(){
        //vid fel uppgifter:     
     }else{                                                                   
         
-         let wrong = document.createElement("inloggad");
+        let wrong = document.createElement("inloggad");
         wrong.innerHTML="oj, något gick fel - försök igen!"
         loginsection.append(wrong);
     }
