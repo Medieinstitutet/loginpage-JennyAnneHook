@@ -36,9 +36,11 @@ loginBtn.addEventListener("click", logincheck);
 function logincheck(){
     let usernameinput=document.getElementById("username").value; 
     let passwordinput=document.getElementById("Password").value;
+  
     if(usernameinput === username && passwordinput === password){
         //console.log("Du är inloggad");
-        localStorage.setItem("inloggad", "true");        //sparar till LS när uppgifterna är rätt
+        localStorage.setItem("username", "janne");        //sparar till LS när uppgifterna är rätt
+        localStorage.setItem("password", "test"); 
         localStorage.getItem("inloggad");
         loginsection.innerHTML="Välkommen du är nu inloggad!";
         loginBtn.classList.add("hide");
